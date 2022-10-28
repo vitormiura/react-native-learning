@@ -17,11 +17,13 @@ import {
   addDoc,
 } from "firebase/firestore";
 const firebaseConfig = {
-  // PIREBAS DB
+  //pirebas config
 };
+import { getStorage } from "firebase/storage";
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
+const storage = getStorage(app);
 const googleProvider = new GoogleAuthProvider();
 const signInWithGoogle = async () => {
   try {
@@ -87,4 +89,5 @@ export {
   registerWithEmailAndPassword,
   sendPasswordReset,
   logout,
+  storage,
 };
