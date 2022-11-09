@@ -1,31 +1,32 @@
-import React, { useState, useEffect } from 'react'
-import { View, Text, TextInput, TouchableOpacity } from 'react-native'
-import {auth, logInWithEmailAndPassword} from './firebaseConfig'
-import styles from './styles'
-import Styles from './styles'
-import Create from '../create'
-import {useAuthState} from 'react-firebase-hooks/auth'
-import { useNavigation } from '@react-navigation/native'
+import React, { useState, useEffect } from "react"
+import { auth, logInWithEmailAndPassword, signInWithGoogle } from "./firebaseConfig";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { View, TextInput, TouchableOpacity, Text } from 'react-native'
+import { useNavigation } from '@react-navigation/native';
 
-export default function Login ({ navigation }) {
-  const [email, setEmail] = useState('')
-  const [password, setPassword]= useState('')
-  const [user, loading, error] = useAuthState(auth)
-  
-  const navigate = useNavigation()
+import Styles from './styles.js'
+import Create from "../create";
 
-  useEffect(()=>{
-    if(loading){
+export default function ({ navigation }) {
+  const [email, setEmail] = useState()
+  const [password, setPassword] = useState()
+  const [user, loading, error] = useAuthState(auth);
+
+  const navigate = useNavigation();
+
+
+  useEffect(() => {
+    if (loading) {
       return;
     }
-    if(user) navigate.navigate(Create);
-    console.log('Ir para a pg Create...')
-  }, [user, loading])
+    if (user) navigate.navigate(Create);
+  }, [user, loading]);
 
   const loginFirebase = () => {
     console.log(email)
     console.log(password)
-    logInWithEmailAndPassword(email, password)
+    console.log("chamou")
+    logInWithEmailAndPassword(email, password);
   }
 
   return (
@@ -35,24 +36,25 @@ export default function Login ({ navigation }) {
         placeholder='email'
         keyboardType='text'
         value={email}
-        onChangeText={(text) => setEmail(text)}
+        onChangeText={(e) => { setEmail(e) }}
       />
-      <TextInput 
+      <TextInput
         style={Styles.txtInput1}
         placeholder='password'
-        secureTextEntry={true}
         keyboardType='password'
         value={password}
-        onChangeText={(text)=>setPassword(text)}
+        onChangeText={(e) => { setPassword(e) }}
       />
       <View style={Styles.botoes}>
         <TouchableOpacity
           style={Styles.botaoLogin}
-          onPress={()=>loginFirebase()}
+          onPress={() => loginFirebase()}
         >
-          <Text style={styles.txtButton}>Login</Text>
+          <Text style={Styles.txtButton}>Login</Text>
         </TouchableOpacity>
       </View>
+
     </View>
   )
 }
+

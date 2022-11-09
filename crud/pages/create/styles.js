@@ -7,57 +7,57 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
-    container1:{
-        flex:0.2,
-        width:'100%',
-        alignItems:'center',
+    container1: {
+        flex: 0.2,
+        width: '100%',
+        alignItems: 'center',
     },
-    container2:{
-        flex:1.5,
-        padding:20,
-        width:'100%',
-        backgroundColor:'#ddd',
-        alignItems:'center',
+    container2: {
+        flex: 1.5,
+        padding: 20,
+        width: '100%',
+        backgroundColor: '#ddd',
+        alignItems: 'center',
     },
     texto1: {
         fontSize: 50,
-        color:'#fff',
+        color: '#fff',
     },
-    texto2:{
-        fontSize:30,
+    texto2: {
+        fontSize: 30,
     },
-    top:{
-        flexDirection:'column',
+    top: {
+        flexDirection: 'column',
     },
-    campo:{
-        paddingBottom:10,
-        paddingTop:10,
-    }, 
-    caixa1:{
-        borderColor:'#222',
-        borderWidth:1,
-        borderRadius:8,
-        color:'#555',
-        height:40,
-        width:'100%',
-        padding:10,
+    campo: {
+        paddingBottom: 10,
+        paddingTop: 10,
     },
-    foto0:{
-        padding:10,
+    caixa1: {
+        borderColor: '#222',
+        borderWidth: 1,
+        borderRadius: 8,
+        color: '#555',
+        height: 30,
+        width: '100%',
+        padding: 10,
+    },
+    foto0: {
+        padding: 10,
         alignItems: 'center',
     },
-    foto1:{
-        width:150,
-        height:150,
-        backgroundColor:'#834989',
-        alignItems:'center',
-        justifyContent:'center',
-        borderRadius:10,
+    foto1: {
+        width: 150,
+        height: 150,
+        backgroundColor: '#eee',
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: 10,
     },
-    entrada:{
-        paddingBottom:10,
-        paddingTop:2,
-        alignItems:'center',
+    entrada: {
+        paddingBottom: 10,
+        paddingTop: 2,
+        alignItems: 'center',
     },
     botao: {
         width: '30%',
@@ -73,12 +73,12 @@ const styles = StyleSheet.create({
         padding: 10,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor:'yellow',
-        borderRadius:10,
+        backgroundColor: 'yellow',
+        borderRadius: 10,
     },
-    sucesso:{
-        fontSize:20,
-        color:'#0f0',
+    sucesso: {
+        fontSize: 20,
+        color: '#0f0',
     },
     txtButton: {
         fontFamily: 'Verdana',

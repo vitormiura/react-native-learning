@@ -3,6 +3,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Entypo, FontAwesome, AntDesign, Feather } from '@expo/vector-icons'
+import ReactDOM from "react-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './pages/home';
 import Create from './pages/create'
 import Read from './pages/read';
@@ -22,11 +24,11 @@ function NavBar() {
                 tabBarStyle: {
                     backgroundColor: '#000',
                     borderTopColor: 'transparent',
-                    paddingBottom:5,
-                    paddingTop:5,
+                    paddingBottom: 1,
+                    paddingTop: 1,
                 },
-                tabBarActiveTintColor:'#f0f',
-                tabBarInactiveTintColor:'#555'
+                tabBarActiveTintColor: '#f0f',
+                tabBarInactiveTintColor: '#555'
             }}
         >
             <Nav.Screen name='Login' component={Login}
@@ -100,7 +102,6 @@ function NavBar() {
 export default function Routers() {
     return (
         <NavigationContainer>
-
             <Pilha.Navigator>
                 <Pilha.Screen
                     name='NavBar'
@@ -148,6 +149,7 @@ export default function Routers() {
                     options={{ headerShown: false }}
                 />
             </Pilha.Navigator>
+
         </NavigationContainer>
     )
 }

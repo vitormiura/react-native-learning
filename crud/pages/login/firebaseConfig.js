@@ -1,3 +1,6 @@
+//import firebase auth react with code example
+//https://www.folkstalk.com/2022/09/import-firebase-auth-react-with-code-examples-2.html
+
 import { initializeApp } from "firebase/app";
 import {
   GoogleAuthProvider,
@@ -16,10 +19,12 @@ import {
   where,
   addDoc,
 } from "firebase/firestore";
-const firebaseConfig = {
-  //pirebas config
-};
 import { getStorage } from "firebase/storage";
+
+const firebaseConfig = {
+//pirebase key
+};
+
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
